@@ -22,8 +22,9 @@ export default class Ball {
  	if (this.y <= 0 + this.radius || this.y >= 150 - this.radius) {
  		this.vy *= -1
  	}
- 	if (this.x <= 1 + this.radius || this.x >= 300 - this.radius) {
- 		this.vx *= -1
+ 	if (this.x <= 0 + this.radius || this.x >= 300 - this.radius) {
+ 		this.x = 150;
+ 		this.y = 75;
  	}
  }
 
