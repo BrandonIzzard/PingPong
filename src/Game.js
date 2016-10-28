@@ -11,6 +11,7 @@ export default class Game {
 		this.context.fillStyle = 'white';
 		this.p1 = new Paddle(this.height, 5, 'blue', p1keys);
 		this.p2 = new Paddle(this.height, this.width - 10, 'yellow', p2keys);
+		this.ball = new Ball(this.height/2, this.width/2);
 	}
 
 	drawLine() {
@@ -26,18 +27,11 @@ export default class Game {
 		this.context.fillRect(0, 0, this.width, this.height)
 		this.drawLine()
 	}
-	// drawBall(x, y) {
-	// 	this.context.fillStyle = 'red';
-	// 	this.context.beginPath();
-	// 	this.context.arc(x, y, 5, 0, Math.PI * 2, true);
-	// 	this.context.fill();
-	// 	this.context.beginPath();
-	// }
 
 	render(){
 		this.drawBoard(this.context)
-		// this.drawBall(100, 100)
 		this.p1.render(this.context)
 		this.p2.render(this.context)
+		this.ball.render(this.context)
 	}
 }

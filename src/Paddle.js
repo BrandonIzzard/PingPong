@@ -6,6 +6,7 @@ export default class Paddle {
       this.height = 60;
       this.color = color;
       this.speed = 5;
+      this.boardHeight = boardHeight;
       this.x = x;
       this.y = (boardHeight / 2) - (this.height / 2);
       this.keys = keys;
@@ -25,13 +26,13 @@ export default class Paddle {
 }
 
 moveUp() {
-   if(this.y>=5) {
+   if(this.y - this.speed >= 0) {
       this.y -= this.speed;
    }
 }
 
 moveDown() {
-   if(this.y<=85) {
+   if(this.y + this.height + this.speed <= this.boardHeight) {
       this.y += this.speed;
    }}
 
