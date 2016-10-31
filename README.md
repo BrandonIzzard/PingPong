@@ -25,7 +25,4 @@ Learned to make an old school pong game using HTML5 Canvas. 2 Player pong with a
 ##### Player 2:
 * ▲ : up
 * ▼: down
-<<<<<<< HEAD
 
-=======
->>>>>>> 626ab3016c514d5506e68763ab12d6e90070bd5f
