@@ -1,12 +1,16 @@
 # Pong Game
 
-A basic pong game using HTML5 Canvas.
+Learned to make an old school pong game using HTML5 Canvas. 2 Player pong with a score board.
 
-## Setup
+-----------------------------------------
+![Site Pic](http://i.imgur.com/LqGGdiN.png)
 
-##### Install
+#### Technology  & Tools Used
 
-`> npm i`
+* HTML / HTML5 Canvas
+* Webpack
+* JavaScript ES5 & ES6
+* CSS
 
 ##### Run
 
@@ -17,9 +21,8 @@ A basic pong game using HTML5 Canvas.
 ##### Player 1:
 * a: up
 * z: down
-* q: fire a new ball
 
 ##### Player 2:
 * ▲ : up
 * ▼: down
-* /: fire a new ball
+
