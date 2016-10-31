@@ -4,15 +4,15 @@ const size = 5;
 export default class Ball {
 	constructor() {
       this.x = 150; // random x
-      this.y = 75; // random y
+      this.y = 75; 
       this.vy = Math.floor(Math.random() * 12 - 6); // randomize direction, not straight up
-      this.vx = (8 - Math.abs(this.vy)); // x direction
+      this.vx = (6 - Math.abs(this.vy)); // x direction
       this.size = size;
       this.radius = 5;
   }
 
   draw(context) {
-  	context.fillStyle = 'magenta';
+  	context.fillStyle = '';
   	context.beginPath();
   	context.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   	context.fill();
@@ -55,8 +55,8 @@ export default class Ball {
 
   	ballReset(){
   		this.x = 150
-  		this.y = Math.floor(Math.random() * 125) + 25;
-  		this.vy = Math.floor(Math.random() * 12 - 6)
+  		this.y = Math.floor(Math.random() * 50 ) + 25;
+  		this.vy = Math.floor(Math.random() * 12 - 6);
   		this.vx *= -1
   		let snd = new Audio("./sounds/pong-01.wav")
   		snd.play()
