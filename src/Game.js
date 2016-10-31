@@ -1,6 +1,8 @@
 import Paddle from './Paddle';
 import {p1keys, p2keys} from './keys';
 import Ball from './Ball';
+import ScoreBoard from './ScoreBoard';
+
 
 export default class Game {
 	constructor() {
@@ -9,13 +11,16 @@ export default class Game {
 		this.height = canvas.height;
 		this.context = canvas.getContext('2d');
 		this.context.fillStyle = 'white';
-		this.p1 = new Paddle(this.height, 5, 'blue', p1keys);
-		this.p2 = new Paddle(this.height, this.width - 10, 'yellow', p2keys);
+		this.player1 = new Paddle(this.height, 5, 'blue', p1keys);
+		this.player2 = new Paddle(this.height, this.width - 10, 'red', p2keys)
+		this.p1Score = new ScoreBoard(180, 25);
+		this.p2Score = new ScoreBoard(100, 25);
 		this.ball = new Ball(this.height/2, this.width/2);
+		this.ball1 = new Ball(this.height/2, this.width/2);
 	}
 
 	drawLine() {
-		this.context.setLineDash([10, 10]);
+		this.context.setLineDash([3, 3]);
 		this.context.beginPath();
 		this.context.moveTo(this.width / 2, 0);
 		this.context.lineTo(this.width / 2, this.height);
@@ -30,8 +35,10 @@ export default class Game {
 
 	render(){
 		this.drawBoard(this.context)
-		this.p1.render(this.context)
-		this.p2.render(this.context)
-		this.ball.render(this.context)
+		this.player1.render(this.context)
+		this.player2.render(this.context)
+		this.p1Score.render(this.context)
+		this.p2Score.render(this.context)
+		this.ball.render(this.context, this.player1, this.player2, this.p1Score, this.p2Score)
 	}
 }

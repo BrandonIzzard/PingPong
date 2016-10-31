@@ -3,9 +3,9 @@
 export default class Paddle {
    constructor(boardHeight, x, color, keys, speed) {
       this.width = 5;
-      this.height = 60;
+      this.height = 10;
       this.color = color;
-      this.speed = 5;
+      this.speed = 10;
       this.boardHeight = boardHeight;
       this.x = x;
       this.y = (boardHeight / 2) - (this.height / 2);
@@ -14,7 +14,7 @@ export default class Paddle {
    }
 
    keyListener(event) {
-    switch(event.keyCode) {
+     switch(event.keyCode) {
       case this.keys.up:
       this.moveUp();
       break;

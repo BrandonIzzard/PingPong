@@ -70,14 +70,15 @@ h1 {
 }
 #game {
    background-color: black;
+   background-image: url('http://us.blizzard.com/static/_images/games/war3/wallpapers/wall1/wall1-1440x900.jpg');
    display: block;
-   height: 256px;
+   height: 80%;
    margin: 20px auto;
-   width: 512px;
+   width: 80%;
 }
 .players {
    display: inline-flex;
    justify-content: space-between;
    text-align: center;
-   width: 512px;
+   width: 75%;
 }
