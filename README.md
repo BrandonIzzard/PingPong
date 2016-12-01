@@ -12,10 +12,6 @@ Learned to make an old school pong game using HTML5 Canvas. 2 Player pong with a
 * JavaScript ES5 & ES6
 * CSS
 
-##### Run
-
-`> npm start`
-
 ## Keys
 
 ##### Player 1:
